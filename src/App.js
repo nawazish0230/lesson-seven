@@ -2,7 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 const App = () => {
-  const [filteredData, setFilteredData] = useState([]);
+  const [filteredData, setFilteredData] = useState([
+    { name: "Peppy Paneer Pizza", type: "Pizza", rating: "9 / 10" },
+    {
+      name: "Double Cheese Margherita Pizza",
+      type: "Pizza",
+      rating: "9.5 / 10",
+    },
+  ]);
   const data = [
     { name: "Peppy Paneer Pizza", type: "Pizza", rating: "9 / 10" },
     {
@@ -26,33 +33,38 @@ const App = () => {
   };
 
   return (
-    <div className="container">
-      <h1>🍲 Foods !!</h1>
-      <p style={{ marginTop: "1rem" }}>Checkout the list of foods</p>
-      <button className="btn-custom" onClick={() => clickHandler("Pizza")}>
-        Pizza
-      </button>
-      <button
-        className="btn-custom"
-        onClick={() => clickHandler("Main Course")}
-      >
-        Main Course
-      </button>
-      <button className="btn-custom" onClick={() => clickHandler("Beverages")}>
-        Beverages
-      </button>
-      <hr />
-      {filteredData &&
-        filteredData.map((data, index) => {
-          return (
-            <div className="list-container" key={index}>
-              <div className="list-inner">
-                <p className="list-item">{data.name}</p>
-                <p className="list-item">{data.rating}</p>
+    <div className="main-container">
+      <div className="container">
+        <h1>🍲 Foods !!</h1>
+        <p style={{ marginTop: "1rem" }}>Checkout the list of foods</p>
+        <button className="btn-custom" onClick={() => clickHandler("Pizza")}>
+          Pizza
+        </button>
+        <button
+          className="btn-custom"
+          onClick={() => clickHandler("Main Course")}
+        >
+          Main Course
+        </button>
+        <button
+          className="btn-custom"
+          onClick={() => clickHandler("Beverages")}
+        >
+          Beverages
+        </button>
+        <hr />
+        {filteredData &&
+          filteredData.map((data, index) => {
+            return (
+              <div className="list-container" key={index}>
+                <div className="list-inner">
+                  <p className="list-item">{data.name}</p>
+                  <p className="list-item">{data.rating}</p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+      </div>
     </div>
   );
 };

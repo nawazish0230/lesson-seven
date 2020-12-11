@@ -3,32 +3,52 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-  /* background-color: rgb(255, 255, 255); */
+  background-color: #fff;
+  color: 192a56;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./food.jpg);
+  /* background-color: red; */
+  text-align: center;
 }
 .container {
   width: 35%;
-  margin: 2rem auto;
   text-align: left;
+  position: absolute;
+  padding: 1.5rem;
+  border-radius: 10px;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 .btn-custom {
   padding: 0.5rem 1.2rem;
   margin: 2rem 0.6rem;
-  background-color: rgb(195, 195, 195);
+  background-color: #192a56;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #192a56;
   cursor: pointer;
   font-size: 14px;
+  color: #fff;
 }
 .list-container {
   margin: 1rem 0;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #d9d9d9, -5px -5px 10px #ffffff;
+  color: #192a56;
 }
 .list-inner {
-  border: 1px solid rgb(110, 110, 110);
-  border-radius: 10px;
+  /* border: 1px solid rgb(110, 110, 110); */
+  border-radius: 26px;
+  padding: 1rem 0rem;
 }
 .list-item {
   padding: 0.6rem 1.2rem;
   font-size: 16px;
+  border-radius: 26px;
 }
 @media (max-width: 480px) {
   .container {
